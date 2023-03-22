@@ -1,0 +1,22 @@
+{
+  "name": "writer-app",
+  "description": "",
+  "main": "src/index.js",
+  "authors": [
+    "Nguyen Chau Khanh"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/TheKIDends/Writer-App",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
