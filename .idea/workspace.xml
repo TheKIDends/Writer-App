@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Start project with TinyMCE integration">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/script/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writer-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Writer-App.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/textarea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +23,7 @@
       <list>
         <option value="package.json" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,18 +49,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/TheKIDends/IT/Web/Writer-App/views",
+    "last_opened_file_path": "D:/TheKIDends/IT/Web/Writer-App/database",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\TheKIDends\\IT\\Web\\Writer-App\\node_modules\\typescript\\lib"
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TheKIDends\IT\Web\Writer-App\database" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\views" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TheKIDends\IT\Web\Writer-App\public" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\src" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App" />
     </key>
@@ -73,6 +78,10 @@
       <workItem from="1679450714310" duration="2782000" />
       <workItem from="1679453590584" duration="2103000" />
       <workItem from="1679491967883" duration="11677000" />
+      <workItem from="1679539102106" duration="2733000" />
+      <workItem from="1679627282240" duration="3698000" />
+      <workItem from="1679631230627" duration="1217000" />
+      <workItem from="1679639452480" duration="3969000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>

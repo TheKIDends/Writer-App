@@ -2,38 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-  <script>
-    tinymce.init({
-      selector: 'textarea#default',
-      width: 1000,
-      height: 300,
-      plugins:[
-        'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'prewiew', 'anchor', 'pagebreak',
-        'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media',
-        'table', 'emoticons', 'template', 'codesample'
-      ],
-      toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify |' +
-              'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
-              'forecolor backcolor emoticons',
-      menu: {
-        favs: {title: 'menu', items: 'code visualaid | searchreplace | emoticons'}
-      },
-      menubar: 'favs file edit view insert format tools table',
-      content_style: 'body{font-family:Helvetica,Arial,sans-serif; font-size:16px}'
-    });
-  </script>
-  <title>Write App</title>
+    <title>Write App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="/css/navbar.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-  <h3>Advanced Text Editor</h3>
-  <form action="" method="get">
-    <textarea name="textarea" id="default"></textarea>
-    <input type="submit" value="submit">
-  </form>
+<nav class="navbar">
+    <div class="navbar-text logo">Writer App</div>
+    <ul class="navbar-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/write">Create new</a></li>
+    </ul>
+</nav>
+
+
 </body>
+
 </html>
