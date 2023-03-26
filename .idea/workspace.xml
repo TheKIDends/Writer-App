@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to check for duplicate post titles">
-      <change afterPath="$PROJECT_DIR$/public/js/scripts/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/post.ejs" afterDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to view post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/utilities/local_storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/local_storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/post.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1679727439595" duration="18037000" />
       <workItem from="1679755641373" duration="25692000" />
       <workItem from="1679831380972" duration="1746000" />
-      <workItem from="1679853236378" duration="7975000" />
+      <workItem from="1679853236378" duration="8606000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679856335189</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add functionality to view post">
+      <created>1679861567877</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679861567877</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +159,7 @@
     <MESSAGE value="Add functionality to display posts on homepage" />
     <MESSAGE value="Add functionality to delete a post" />
     <MESSAGE value="Add functionality to check for duplicate post titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to check for duplicate post titles" />
+    <MESSAGE value="Add functionality to view post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to view post" />
   </component>
 </project>
