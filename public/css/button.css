@@ -1,0 +1,57 @@
+.button_style01 {
+    background-color: #3E438E;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1em;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.button_style01:before,
+.button_style01:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: "";
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.button_style01:before {
+    border-color: #3E438E;
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+}
+
+.button_style01:after {
+    border-bottom-width: 2px;
+    border-color: #3E438E;
+    bottom: -5px;
+    right: 0px;
+}
+
+.button_style01:hover,
+.button_style01.hover {
+    background-color: #3E438E;
+}
+
+.button_style01:hover:before,
+.button_style01.hover:before,
+.button_style01:hover:after,
+.button_style01.hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+/* Style 02 */

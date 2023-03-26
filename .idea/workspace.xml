@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add Home Page">
-      <change afterPath="$PROJECT_DIR$/public/css/textField.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/constants/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scripts/writePost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.bowerrc" beforeDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Store data in localStorage">
+      <change afterPath="$PROJECT_DIR$/public/css/box_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/scripts/get_post_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/utilities/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/postContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/textField.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/text_field.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/postContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/init_tinymce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/writePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write_post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
     </list>
@@ -45,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/TheKIDends/IT/Web/Writer-App/public&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/TheKIDends/IT/CSDL/MyWebsite",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\TheKIDends\IT\Web\Writer-App\public" />
@@ -90,7 +86,7 @@
       <workItem from="1679631230627" duration="1217000" />
       <workItem from="1679639452480" duration="7149000" />
       <workItem from="1679727439595" duration="18037000" />
-      <workItem from="1679755641373" duration="6610000" />
+      <workItem from="1679755641373" duration="20610000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679643691446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Store data in localStorage">
+      <created>1679769192687</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679769192687</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +130,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Start project with TinyMCE integration" />
     <MESSAGE value="Add Home Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Home Page" />
+    <MESSAGE value="Store data in localStorage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Store data in localStorage" />
   </component>
 </project>
