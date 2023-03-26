@@ -17,6 +17,9 @@ export function addPost(post) {
 }
 
 export function deletePost(idPost) {
+    if (idPost < 0 || idPost >= getTotalPosts()) {
+        return false;
+    }
     let newPostList = postList;
     newPostList.splice(idPost, 1);
     storage.setItem(POST_LIST, JSON.stringify(newPostList));

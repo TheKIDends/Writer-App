@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Write App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="/public/css/navbar.css">
+    <link rel=" stylesheet" href="/public/css/box_list.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="navbar-text logo">Writer App</div>
+    <ul class="navbar-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/write">Create new</a></li>
+    </ul>
+</nav>
+
+<h1 style="display: flex; justify-content: center;" id="post_title"></h1>
+<div style="margin: 70px 0 0 0; padding: 0 50px 50px 50px;">
+    <div id="post_content"></div>
+</div>
+
+<script type="module" src="/public/js/scripts/post.js"></script>
+</body>
+
+</html>

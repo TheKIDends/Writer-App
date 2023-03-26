@@ -9,3 +9,7 @@ router.get('/', (req, res) => {
 router.get('/write', (req, res) => {
     res.render('write.ejs');
 })
+
+router.get('/post', (req, res) => {
+    res.render('post.ejs');
+})
