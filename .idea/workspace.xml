@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to display posts on homepage">
-      <change afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/utilities/local_storage.js" afterDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to delete a post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/box_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/box_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/get_post_list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/write_post.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/utilities/local_storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/local_storage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
       <workItem from="1679727439595" duration="18037000" />
       <workItem from="1679755641373" duration="25692000" />
       <workItem from="1679831380972" duration="1746000" />
-      <workItem from="1679853236378" duration="1898000" />
+      <workItem from="1679853236378" duration="2931000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -116,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679788898489</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add functionality to delete a post">
+      <created>1679855186658</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679855186658</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +143,7 @@
     <MESSAGE value="Add Home Page" />
     <MESSAGE value="Store data in localStorage" />
     <MESSAGE value="Add functionality to display posts on homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to display posts on homepage" />
+    <MESSAGE value="Add functionality to delete a post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to delete a post" />
   </component>
 </project>

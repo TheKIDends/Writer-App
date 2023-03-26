@@ -22,3 +22,13 @@ export function deletePost(idPost) {
     storage.setItem(POST_LIST, JSON.stringify(newPostList));
     return true;
 }
+
+export function checkIfTitleExists(title) {
+    for (let idPost = 0; idPost < postList.length; ++idPost) {
+        const item = postList[idPost];
+        if (item.title === title) {
+            return true;
+        }
+    }
+    return false;
+}

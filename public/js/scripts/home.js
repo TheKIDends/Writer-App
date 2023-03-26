@@ -14,14 +14,15 @@ for (let idPost = 0; idPost < postList.length; ++idPost) {
     title.textContent = item.title;
     elementList.appendChild(title);
 
-    // const content = document.createElement('div');
-    // content.classList.add('content');
-    // content.textContent = previewText(item.content, 70);
-    // elementList.appendChild(content);
+    const dateOpened = document.createElement('div');
+    dateOpened.idPost='date-opened-' + idPost;
+    dateOpened.classList.add('date');
+    dateOpened.textContent = 'Date opened: ' + item.date_opened;
+    elementList.appendChild(dateOpened);
 
     const dateModified = document.createElement('div');
     dateModified.idPost='date-modified-' + idPost;
-    dateModified.classList.add('date-modified');
+    dateModified.classList.add('date');
     dateModified.textContent = 'Date modified: ' + item.date_modified;
     elementList.appendChild(dateModified);
 
