@@ -1,10 +1,4 @@
-import {POST_LIST} from "../constants/index.js";
-
-const storage = window !== undefined ? localStorage : null;
-
-if (storage.getItem(POST_LIST) === null)  {
-    storage.setItem(POST_LIST, "[]");
-}
+import {addPost, getTotalPosts} from "../utilities/local_storage.js";
 
 const writeForm = document.getElementById('write_form');
 
@@ -21,15 +15,17 @@ writeForm.addEventListener('submit', (event) => {
         postContent = "No Content!";
     }
 
+    const now = new Date();
+    const options = { timeZone: 'Asia/Ho_Chi_Minh' }; // set timezone to GMT+7
+    const time = now.toLocaleString('en-US', options);
+
     const post = {
+        id: getTotalPosts(),
         title: postTitle.value,
         content: postContent,
-        date_modified: new Date()
+        date_modified: time
     }
-    let postList = JSON.parse(storage.getItem(POST_LIST));
-    console.log(postList);
-
-    storage.setItem(POST_LIST, JSON.stringify([...postList, post]));
+    addPost(post);
 
     alert('Lưu thành công!');
 });
