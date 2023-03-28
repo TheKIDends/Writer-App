@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update Navbar">
-      <change afterPath="$PROJECT_DIR$/public/js/scripts/edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to edit post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/box_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/box_list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/init_tinymce.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/utilities/local_storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/local_storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,7 @@
       <workItem from="1679897258593" duration="501000" />
       <workItem from="1679899310081" duration="4598000" />
       <workItem from="1679916602347" duration="5498000" />
-      <workItem from="1680014987666" duration="4786000" />
+      <workItem from="1680014987666" duration="5127000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -152,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679862182150</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add functionality to edit post">
+      <created>1680028805550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680028805550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +177,7 @@
     <MESSAGE value="Add functionality to check for duplicate post titles" />
     <MESSAGE value="Add functionality to view post" />
     <MESSAGE value="Update Navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Navbar" />
+    <MESSAGE value="Add functionality to edit post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to edit post" />
   </component>
 </project>

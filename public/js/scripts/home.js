@@ -56,12 +56,17 @@ for (let idPost = 0; idPost < postList.length; ++idPost) {
     btnDelete.classList.add('btn-delete');
     btnDelete.textContent = 'Delete';
     btnDelete.addEventListener('click', (event) => {
-        if (deletePost(idPost) === true) {
-            window.location.href = "/";
-            alert('Xóa thành công bài viết ' + title.textContent);
+        if (confirm("Bạn có chắc chắn muốn xóa bài viết không?")) {
+            if (deletePost(idPost) === true) {
+                window.location.href = "/";
+                alert('Xóa thành công bài viết ' + title.textContent);
+            } else {
+                alert('Xóa thất bại');
+            }
         } else {
-            alert('Xóa thất bại');
+            // Hủy thao tác xóa
         }
+
     });
 
     buttons.appendChild(btnDelete);
