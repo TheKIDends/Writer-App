@@ -25,7 +25,7 @@
 }
 
 .btn-view {
-    background: linear-gradient(to bottom, #6371c7, #5563c1);
+    background: linear-gradient(to bottom, #6CE55A, #46E02E);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -37,10 +37,11 @@
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
+    width: 90px;
 }
 
 .btn-view:hover {
-    background: linear-gradient(to bottom, #5563c1, #6371c7);
+    background: linear-gradient(to bottom, #46E02E, #6CE55A);
 }
 
 .btn-delete {
@@ -55,8 +56,29 @@
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
+    width: 90px;
 }
 
 .btn-delete:hover {
     background: linear-gradient(to bottom, #FF4348, #FF5A5F);
+}
+
+.btn-edit {
+    background: linear-gradient(to bottom, #6371c7, #5563c1);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90px;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(to bottom, #5563c1, #6371c7);
 }

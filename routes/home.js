@@ -13,3 +13,7 @@ router.get('/write', (req, res) => {
 router.get('/post', (req, res) => {
     res.render('post.ejs');
 })
+
+router.get('/edit', (req, res) => {
+    res.render('edit.ejs');
+})

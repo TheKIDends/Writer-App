@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to view post">
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update Navbar">
+      <change afterPath="$PROJECT_DIR$/public/js/scripts/edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/post.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/box_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/box_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/init_tinymce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/utilities/local_storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/local_storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,25 +42,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/TheKIDends/IT/CSDL/MyWebsite",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TheKIDends/IT/Web/Writer-App/public/js/scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\TheKIDends\IT\Web\Writer-App\public\js\scripts" />
+      <recent name="D:\TheKIDends\IT\Web\Writer-App\views" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\public" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\database" />
-      <recent name="D:\TheKIDends\IT\Web\Writer-App\views" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -83,7 +89,12 @@
       <workItem from="1679727439595" duration="18037000" />
       <workItem from="1679755641373" duration="25692000" />
       <workItem from="1679831380972" duration="1746000" />
-      <workItem from="1679853236378" duration="8606000" />
+      <workItem from="1679853236378" duration="8686000" />
+      <workItem from="1679889467552" duration="127000" />
+      <workItem from="1679897258593" duration="501000" />
+      <workItem from="1679899310081" duration="4598000" />
+      <workItem from="1679916602347" duration="5498000" />
+      <workItem from="1680014987666" duration="4786000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -134,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679861567877</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update Navbar">
+      <created>1679862182150</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679862182150</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +178,7 @@
     <MESSAGE value="Add functionality to delete a post" />
     <MESSAGE value="Add functionality to check for duplicate post titles" />
     <MESSAGE value="Add functionality to view post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to view post" />
+    <MESSAGE value="Update Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Navbar" />
   </component>
 </project>

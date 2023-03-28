@@ -40,6 +40,17 @@ for (let idPost = 0; idPost < postList.length; ++idPost) {
     });
     buttons.appendChild(btnView);
 
+    const btnEdit = document.createElement('button');
+    btnEdit.idPost='btn-edit-' + idPost;
+    btnEdit.classList.add('btn-edit');
+    btnEdit.textContent = 'Edit';
+    btnEdit.href = `/edit?id=${idPost}`;
+    btnEdit.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = btnEdit.href;
+    });
+    buttons.appendChild(btnEdit);
+
     const btnDelete = document.createElement('button');
     btnDelete.idPost='btn-delete-' + idPost;
     btnDelete.classList.add('btn-delete');
