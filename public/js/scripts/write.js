@@ -60,3 +60,11 @@ writeForm.addEventListener('submit', (event) => {
     alert('Lưu thành công!');
 });
 
+const btnCancel = document.getElementById('btn-cancel');
+btnCancel.addEventListener('click', (event) => {
+    if (confirm("Bạn có chắc chắn muốn hủy bài viết không?")) {
+        window.location.href = "/";
+    } else {
+
+    }
+});

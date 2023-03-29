@@ -19,7 +19,7 @@ export function downloadWord(htmlContent, filename) {
     let fileDownload = document.createElement("a");
     document.body.appendChild(fileDownload);
     fileDownload.href = source;
-    fileDownload.download = 'document.doc';
+    fileDownload.download = filename + '.doc';
     fileDownload.click();
     document.body.removeChild(fileDownload);
 }

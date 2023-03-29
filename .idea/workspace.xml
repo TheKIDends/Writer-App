@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add functionality to download files in Word and HTML formats.">
-      <change afterPath="$PROJECT_DIR$/public/js/utilities/download.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add Cancel Button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writer-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Writer-App.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/utilities/download.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/download.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/post.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +206,7 @@
     <MESSAGE value="Add functionality to edit post" />
     <MESSAGE value="Add confirmation dialog when deleting a post" />
     <MESSAGE value="Add functionality to download files in Word and HTML formats." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to download files in Word and HTML formats." />
+    <MESSAGE value="Add Cancel Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Cancel Button" />
   </component>
 </project>
