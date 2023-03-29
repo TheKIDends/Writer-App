@@ -1,4 +1,4 @@
-import {addPost, checkIfTitleExists, getTotalPosts} from "../utilities/local_storage.js";
+import {addPost, getTotalPosts} from "../utilities/local_storage.js";
 
 tinymce.init({
     selector: 'textarea#post_content',
@@ -23,6 +23,7 @@ const postContent = tinymce.get('post_content');
 
 const writeForm = document.getElementById('write_form');
 writeForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     let content = postContent.getContent();
     const title = postTitle.value.trim();
 
@@ -58,5 +59,4 @@ writeForm.addEventListener('submit', (event) => {
     window.location.href = "/";
     alert('Lưu thành công!');
 });
-
 
