@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add Cancel Button">
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update Navbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/post.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/write.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/write.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/utilities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1680103177321" duration="1312000" />
       <workItem from="1680108216695" duration="5813000" />
       <workItem from="1680117891789" duration="825000" />
-      <workItem from="1680142617637" duration="1460000" />
+      <workItem from="1680142617637" duration="3436000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -183,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680118294268</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update Navbar">
+      <created>1680144181063</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680144181063</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,11 +246,11 @@
     <MESSAGE value="Add functionality to delete a post" />
     <MESSAGE value="Add functionality to check for duplicate post titles" />
     <MESSAGE value="Add functionality to view post" />
-    <MESSAGE value="Update Navbar" />
     <MESSAGE value="Add functionality to edit post" />
     <MESSAGE value="Add confirmation dialog when deleting a post" />
     <MESSAGE value="Add functionality to download files in Word and HTML formats." />
     <MESSAGE value="Add Cancel Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Cancel Button" />
+    <MESSAGE value="Update Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Navbar" />
   </component>
 </project>

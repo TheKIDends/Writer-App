@@ -1,4 +1,5 @@
 import {addPost, getTotalPosts} from "../utilities/local_storage.js";
+import {getDate} from "../utilities/index.js";
 
 tinymce.init({
     selector: 'textarea#post_content',
@@ -43,10 +44,7 @@ writeForm.addEventListener('submit', (event) => {
         content = "No Content!";
     }
 
-    const now = new Date();
-    const options = { timeZone: 'Asia/Ho_Chi_Minh' }; // set timezone to GMT+7
-    const time = now.toLocaleString('en-US', options);
-
+    const time = getDate();
     const post = {
         id: getTotalPosts(),
         title: title,
