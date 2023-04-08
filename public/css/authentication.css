@@ -118,66 +118,66 @@ input[type="submit"] {
     flex: 1;
 }
 
-/* modules/login.css */
+/* modules/authentication.css */
 
 :root {
-    --loginBorderRadus: 0.25rem;
-    --loginColor: #eee;
+    --authBorderRadus: 0.25rem;
+    --authColor: #eee;
 
-    --loginInputBackgroundColor: #3b4148;
-    --loginInputHoverBackgroundColor: #434a52;
+    --authInputBackgroundColor: #3b4148;
+    --authInputHoverBackgroundColor: #434a52;
 
-    --loginLabelBackgroundColor: #363b41;
+    --authLabelBackgroundColor: #363b41;
 
-    --loginSubmitBackgroundColor: #ea4c88;
-    --loginSubmitColor: #eee;
-    --loginSubmitHoverBackgroundColor: #d44179;
+    --authSubmitBackgroundColor: #ea4c88;
+    --authSubmitColor: #eee;
+    --authSubmitHoverBackgroundColor: #d44179;
 }
 
-.login {
+.auth {
 
-    color: var(--loginColor);
+    color: var(--authColor);
 }
 
-.login label,
-.login input[type="text"],
-.login input[type="password"],
-.login input[type="submit"] {
-    border-radius: var(--loginBorderRadus);
+.auth label,
+.auth input[type="text"],
+.auth input[type="password"],
+.auth input[type="submit"] {
+    border-radius: var(--authBorderRadus);
     padding: 1rem;
 }
 
-.login label {
-    background-color: var(--loginLabelBackgroundColor);
+.auth label {
+    background-color: var(--authLabelBackgroundColor);
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     padding-inline: 1.25rem;
 }
 
-.login input[type="password"],
-.login input[type="text"] {
-    background-color: var(--loginInputBackgroundColor);
+.auth input[type="password"],
+.auth input[type="text"] {
+    background-color: var(--authInputBackgroundColor);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
 
-.login input[type="password"]:focus,
-.login input[type="password"]:hover,
-.login input[type="text"]:focus,
-.login input[type="text"]:hover {
-    background-color: var(--loginInputHoverBackgroundColor);
+.auth input[type="password"]:focus,
+.auth input[type="password"]:hover,
+.auth input[type="text"]:focus,
+.auth input[type="text"]:hover {
+    background-color: var(--authInputHoverBackgroundColor);
 }
 
-.login input[type="submit"] {
-    background-color: var(--loginSubmitBackgroundColor);
-    color: var(--loginSubmitColor);
+.auth input[type="submit"] {
+    background-color: var(--authSubmitBackgroundColor);
+    color: var(--authSubmitColor);
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.login input[type="submit"]:focus,
-.login input[type="submit"]:hover {
-    background-color: var(--loginSubmitHoverBackgroundColor);
+.auth input[type="submit"]:focus,
+.auth input[type="submit"]:hover {
+    background-color: var(--authSubmitHoverBackgroundColor);
 }
 
 

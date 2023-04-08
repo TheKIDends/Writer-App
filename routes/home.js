@@ -18,6 +18,10 @@ router.get('/edit', (req, res) => {
     res.render('edit.ejs');
 })
 
-router.get('/sign_in', (req, res) => {
-    res.render('sign_in.ejs');
+router.get('/login', (req, res) => {
+    res.render('login.ejs');
+})
+
+router.get('/register', (req, res) => {
+    res.render('register.ejs');
 })
