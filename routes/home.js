@@ -17,3 +17,7 @@ router.get('/post', (req, res) => {
 router.get('/edit', (req, res) => {
     res.render('edit.ejs');
 })
+
+router.get('/sign_in', (req, res) => {
+    res.render('sign_in.ejs');
+})

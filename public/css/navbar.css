@@ -1,3 +1,7 @@
+:root {
+    --navbarColor: #2c3338;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -8,7 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #333;
+    background-color: var(--navbarColor);
     height: 50px;
     padding-right: 50px;
     padding-left: 30px;
@@ -45,7 +49,7 @@ ul {
     align-items: center;
 }
 
-a {
+.item_menu {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -55,7 +59,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-a:hover {
+.item_menu:hover {
     background-color: white;
-    color: #333;
+    color: var(--navbarColor);
 }
