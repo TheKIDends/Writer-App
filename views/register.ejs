@@ -24,22 +24,6 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-
-        .svg-icon {
-            width: 1em;
-            height: 1em;
-        }
-
-        .svg-icon path,
-        .svg-icon polygon,
-        .svg-icon rect {
-            fill: #4691f6;
-        }
-
-        .svg-icon circle {
-            stroke: #4691f6;
-            stroke-width: 1;
-        }
     </style>
 </head>
 
@@ -57,8 +41,7 @@
 <div class="box">
     <h1 style="display: flex; justify-content: center; color: white">Sign Up</h1>
 
-    <form method="POST" class="form auth" style="margin-top: 30px">
-
+    <form id="register_form" method="POST" class="form auth" style="margin-top: 30px">
         <div class="form__field">
             <label for="register_username">
                 <svg class="icon">
@@ -129,6 +112,8 @@
         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
     </symbol>
 </svg>
+
+<script type="module" src="/public/js/scripts/register.js"></script>
 
 </body>
 </html>
