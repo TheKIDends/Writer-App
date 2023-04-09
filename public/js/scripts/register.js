@@ -5,11 +5,6 @@ registerForm.addEventListener('submit', function(event) {
     const email = document.getElementById('register_email').value;
     const password = document.getElementById('register_password').value;
     const confirmPassword = document.getElementById('confirm_password').value;
-    if (password !== confirmPassword) {
-        alert('Password và Confirm password không trùng khớp');
-        return;
-    }
-
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/api/register', true);
@@ -25,10 +20,10 @@ registerForm.addEventListener('submit', function(event) {
         }
     };
 
-    // console.log("submit");
     const formData = new FormData();
     formData.append('username', username);
     formData.append('email', email);
     formData.append('password', password);
+    formData.append('confirm_password', confirmPassword);
     xhr.send(new URLSearchParams(formData));
 });
