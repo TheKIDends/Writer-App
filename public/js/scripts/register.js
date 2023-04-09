@@ -18,7 +18,7 @@ registerForm.addEventListener('submit', function(event) {
     xhr.onreadystatechange = function() { // callback
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                console.log(xhr.responseText);
+                alert(xhr.responseText);
             } else {
                 console.error(xhr.status);
             }

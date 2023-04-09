@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Add Register Page">
-      <change afterPath="$PROJECT_DIR$/database/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/mysql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scripts/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Connect to MySQL database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authentication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,7 @@
       <workItem from="1680108216695" duration="5813000" />
       <workItem from="1680117891789" duration="825000" />
       <workItem from="1680142617637" duration="3436000" />
-      <workItem from="1680943016374" duration="32065000" />
+      <workItem from="1680943016374" duration="34144000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -210,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680979342613</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Connect to MySQL database">
+      <created>1681035326122</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681035326122</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +275,7 @@
     <MESSAGE value="Update Navbar" />
     <MESSAGE value="Add Login Page" />
     <MESSAGE value="Add Register Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Register Page" />
+    <MESSAGE value="Connect to MySQL database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect to MySQL database" />
   </component>
 </project>
