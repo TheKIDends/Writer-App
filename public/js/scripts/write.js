@@ -1,5 +1,8 @@
 import {addPost, getTotalPosts} from "../utilities/local_storage.js";
 import {getDate} from "../utilities/index.js";
+import {checkAuthentication} from "./authentication.js";
+
+checkAuthentication();
 
 tinymce.init({
     selector: 'textarea#post_content',

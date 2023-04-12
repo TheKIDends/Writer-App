@@ -1,6 +1,9 @@
 import {getTotalPosts, postList, setPostList} from "../utilities/local_storage.js";
 import {downloadHTML, downloadWord} from "../utilities/download.js";
 import {getDate} from "../utilities/index.js";
+import {checkAuthentication} from "./authentication.js";
+
+checkAuthentication();
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');

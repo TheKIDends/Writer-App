@@ -1,4 +1,7 @@
 import {getTotalPosts, postList, setPostList} from "../utilities/local_storage.js";
+import {checkAuthentication} from "./authentication.js";
+
+checkAuthentication();
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');

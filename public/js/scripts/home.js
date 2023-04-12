@@ -1,7 +1,9 @@
 import {deletePost, postList} from "../utilities/local_storage.js";
+import {checkAuthentication} from "./authentication.js";
+
+checkAuthentication();
 
 const posts = document.getElementById('post_list');
-
 
 for (let idPost = 0; idPost < postList.length; ++idPost) {
     const post = postList[idPost];

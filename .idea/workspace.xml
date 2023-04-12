@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update registration feature">
+      <change afterPath="$PROJECT_DIR$/public/js/scripts/authentication.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/scripts/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/utilities/tokens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/authentication.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/authentication.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +61,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/TheKIDends/IT/Web/Writer-App/public/img",
+    "javascript.nodejs.core.library.configured.version": "18.15.0",
+    "javascript.nodejs.core.library.typings.version": "18.15.0",
+    "last_opened_file_path": "F:/TheKIDends/IT/Web/Writer-App/public/js/scripts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\TheKIDends\IT\Web\Writer-App\public\js\scripts" />
       <recent name="F:\TheKIDends\IT\Web\Writer-App\public\img" />
       <recent name="F:\TheKIDends\IT\Web\Writer-App\views" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\public\js\scripts" />
       <recent name="D:\TheKIDends\IT\Web\Writer-App\views" />
-      <recent name="D:\TheKIDends\IT\Web\Writer-App\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\TheKIDends\IT\Web\Writer-App\public\js\scripts" />
@@ -102,7 +119,9 @@
       <workItem from="1680108216695" duration="5813000" />
       <workItem from="1680117891789" duration="825000" />
       <workItem from="1680142617637" duration="3436000" />
-      <workItem from="1680943016374" duration="34517000" />
+      <workItem from="1680943016374" duration="36530000" />
+      <workItem from="1681090979057" duration="6150000" />
+      <workItem from="1681270642834" duration="10270000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -216,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681037441352</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update registration feature">
+      <created>1681037728700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681037728700</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

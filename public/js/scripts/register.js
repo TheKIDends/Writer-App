@@ -13,7 +13,11 @@ registerForm.addEventListener('submit', function(event) {
     xhr.onreadystatechange = function() { // callback
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                alert(xhr.responseText);
+                let response = JSON.parse(xhr.responseText);
+                if (response.message === 'Đăng ký thành công hãy đăng nhập') {
+                    window.location.href = "/login";
+                }
+                alert(response.message);
             } else {
                 console.error(xhr.status);
             }
