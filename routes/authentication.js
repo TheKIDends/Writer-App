@@ -1,6 +1,6 @@
 import express from "express";
 import {db} from "../database/mysql.js";
-import {generateAccessToken} from "../public/js/utilities/tokens.js";
+import {generateAccessToken, setToken, token} from "../public/js/utilities/tokens.js";
 
 export const auth_router = express.Router();
 
@@ -32,7 +32,8 @@ auth_router.post('/api/login', (req, res) => {
                         return res.send({ message: 'Sai mật khẩu'});
                     }
                     else {
-                        const token = generateAccessToken({ email: email, password: password });
+
+                        setToken(generateAccessToken({ email: email, password: password }));
                         return res.send({ message: 'Đăng nhập thành công', token: token});
                     }
                 }

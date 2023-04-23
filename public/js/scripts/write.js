@@ -1,4 +1,3 @@
-import {addPost, getTotalPosts} from "../utilities/local_storage.js";
 import {getDate} from "../utilities/index.js";
 import {checkAuthentication} from "./authentication.js";
 
@@ -47,18 +46,33 @@ writeForm.addEventListener('submit', (event) => {
         content = "No Content!";
     }
 
-    const time = getDate();
-    const post = {
-        id: getTotalPosts(),
-        title: title,
-        content: content,
-        date_opened: time,
-        date_modified: time
-    }
-    addPost(post);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/write', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    window.location.href = "/";
-    alert('Lưu thành công!');
+    xhr.onreadystatechange = function() { // callback
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let response = JSON.parse(xhr.responseText);
+
+                if (response.message === 'Lưu thành công!') {
+                    window.location.href = "/";
+                }
+                alert(response.message);
+            } else {
+                console.error(xhr.status);
+            }
+        }
+    };
+
+    const time = getDate();
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('content', content);
+    formData.append('date_opened', time);
+    formData.append('date_modified', time);
+    xhr.send(new URLSearchParams(formData));
+
 });
 
 const btnCancel = document.getElementById('btn-cancel');

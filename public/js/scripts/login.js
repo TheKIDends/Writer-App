@@ -14,7 +14,6 @@ loginForm.addEventListener('submit', function(event) {
                 let response = JSON.parse(xhr.responseText);
 
                 if (response.message === 'Đăng nhập thành công') {
-                    console.log(response.token);
                     document.cookie = `token=${response.token}`;
                     window.location.href = "/";
                 }

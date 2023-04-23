@@ -1,8 +1,7 @@
 export function checkAuthentication() {
     const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
-    console.log(token);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/home', true);
+    xhr.open('POST', '/api', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onreadystatechange = function() { // callback
@@ -16,6 +15,10 @@ export function checkAuthentication() {
                 else if (response.message === "false") {
                     window.location.href = "/login";
                     alert("Vui lòng đăng nhập.");
+                }
+                else {
+                    // let auth = response.message;
+                    // console.log(auth.email + ' ' + auth.password);
                 }
             } else {
                 console.error(xhr.status);

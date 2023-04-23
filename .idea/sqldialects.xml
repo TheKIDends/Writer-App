@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/database/database.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/public/js/utilities/mysql.js" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/routes/authentication.js" dialect="GenericSQL" />
   </component>
 </project>
