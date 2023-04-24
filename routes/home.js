@@ -1,6 +1,6 @@
 import express from "express";
 import {authenticateToken} from "../public/js/utilities/tokens.js";
-import {addPost, getPost} from "../public/js/utilities/mysql.js";
+import {addPost, editPost, getPostById, getPosts} from "../public/js/utilities/mysql.js";
 
 export const home_router = express.Router();
 
@@ -9,7 +9,7 @@ home_router.get('/', (req, res) => {
 })
 
 home_router.post('/api/home', async (req, res) => {
-    const data = await getPost();
+    const data = await getPosts();
     return res.send(data);
 })
 
@@ -32,7 +32,7 @@ home_router.post('/api/write', async (req, res) => {
         date_modified: data.date_modified
     }
     const resultAddPost = await addPost(post);
-    return res.send({ message: resultAddPost});
+    return res.send(resultAddPost);
 })
 
 home_router.get('/post', (req, res) => {
@@ -43,7 +43,15 @@ home_router.get('/edit', (req, res) => {
     res.render('edit.ejs');
 })
 
-home_router.post('/api/edit', async (req, res) => {
-    const data = await getPost();
+home_router.post('/api/edit/get_post', async (req, res) => {
+    const postId = req.body.post_id;
+    const data = await getPostById(postId);
     return res.send(data);
+})
+
+home_router.post('/api/edit/edit_post', async (req, res) => {
+    const postId = req.body.post_id;
+    const data = JSON.parse(req.body.data);
+    const resultEditPost = await editPost(postId, data);
+    return res.send(resultEditPost);
 })

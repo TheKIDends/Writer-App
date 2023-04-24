@@ -43,7 +43,7 @@ writeForm.addEventListener('submit', (event) => {
     // }
 
     if (content.trim().length === 0) {
-        content = "No Content!";
+        content = "";
     }
 
     const xhr = new XMLHttpRequest();

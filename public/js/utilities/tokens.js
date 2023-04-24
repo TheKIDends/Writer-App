@@ -7,7 +7,7 @@ export function setToken(_token) {
 }
 
 export function generateAccessToken(jsonInfo) {
-    return jwt.sign(jsonInfo, process.env.TOKEN_SECRET, { expiresIn: '50s' });
+    return jwt.sign(jsonInfo, process.env.TOKEN_SECRET, { expiresIn: '3600s' });
 }
 
 export function authenticateToken(token) {
