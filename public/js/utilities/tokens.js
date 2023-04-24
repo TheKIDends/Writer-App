@@ -7,14 +7,12 @@ export function setToken(_token) {
 }
 
 export function generateAccessToken(jsonInfo) {
-    return jwt.sign(jsonInfo, process.env.TOKEN_SECRET, { expiresIn: '3600s' });
+    return jwt.sign(jsonInfo, process.env.TOKEN_SECRET, { expiresIn: '50s' });
 }
 
 export function authenticateToken(token) {
     try {
         const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
-        // const email = decodedToken.email;
-        // const password = decodedToken.password;
         return "true";
     } catch (err) {
         if (err.name === 'TokenExpiredError') {

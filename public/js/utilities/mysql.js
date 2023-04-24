@@ -1,8 +1,11 @@
 import {db} from "../../../database/mysql.js";
 import jwt from "jsonwebtoken";
-import {token} from "./tokens.js";
+import {authenticateToken, token} from "./tokens.js";
 
 export async function addPost(post) {
+    if (authenticateToken(token) !== "true") {
+        return 'false';
+    }
     const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
     const email = decodedToken.email;
 
@@ -45,6 +48,9 @@ export async function addPost(post) {
 }
 
 export async function getPost() {
+    if (authenticateToken(token) !== "true") {
+        return { message: 'false', posts: {} };
+    }
     const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
     const email = decodedToken.email;
 
@@ -58,7 +64,7 @@ export async function getPost() {
             , async (err, result) => {
                 if (err) throw err;
                 if (result.length === 0) {
-                    return resolve('False');
+                    return resolve({ message: 'false', posts: {} });
                 }
 
                 const author_id = result[0].id;
@@ -72,11 +78,11 @@ export async function getPost() {
                         `
                         , async (err, result) => {
                             if (err) {
-                                return resolve('False');
+                                return resolve({ message: 'false', posts: {} });
                             }
 
                             const posts = JSON.stringify(result);
-                            return resolve(posts);
+                            return resolve({ message: 'true', posts: posts });
                         }
                     );
                 }));

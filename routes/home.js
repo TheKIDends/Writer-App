@@ -1,7 +1,6 @@
 import express from "express";
 import {authenticateToken} from "../public/js/utilities/tokens.js";
 import {addPost, getPost} from "../public/js/utilities/mysql.js";
-import {db} from "../database/mysql.js";
 
 export const home_router = express.Router();
 
@@ -10,14 +9,14 @@ home_router.get('/', (req, res) => {
 })
 
 home_router.post('/api/home', async (req, res) => {
-    const posts = await getPost();
-    return res.send({ posts: posts });
+    const data = await getPost();
+    return res.send(data);
 })
 
 home_router.post('/api', (req, res) => {
     const token = req.body.token;
     let accessToken = authenticateToken(token);
-    return res.send({ message: accessToken});
+    return res.send({ message: accessToken });
 })
 
 home_router.get('/write', (req, res) => {
@@ -42,4 +41,9 @@ home_router.get('/post', (req, res) => {
 
 home_router.get('/edit', (req, res) => {
     res.render('edit.ejs');
+})
+
+home_router.post('/api/edit', async (req, res) => {
+    const data = await getPost();
+    return res.send(data);
 })
