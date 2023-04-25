@@ -1,8 +1,8 @@
 import {getTotalPosts, postList, setPostList} from "../utilities/local_storage.js";
 import {checkAuthentication} from "./authentication.js";
-import {getDate} from "../utilities/index.js";
 
 checkAuthentication();
+const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
@@ -31,6 +31,7 @@ if (id < 0 || id >= getTotalPosts()) {
     };
 
     const formData = new FormData();
+    formData.append('token', token);
     formData.append('post_id', id);
     xhr.send(new URLSearchParams(formData));
 }
@@ -93,6 +94,7 @@ function processResponse(post) {
 
         // console.log(data);
         const formData = new FormData();
+        formData.append('token', token);
         formData.append('post_id', id);
         formData.append('data', JSON.stringify(data));
         xhr.send(new URLSearchParams(formData));

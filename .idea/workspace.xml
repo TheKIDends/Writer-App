@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update Writer App">
+    <list default="true" id="f82ca884-7550-48d3-9a82-9295e8057f00" name="Changes" comment="Update functionality to edit post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/authentication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/scripts/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts/write.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/utilities/mysql.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/mysql.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/utilities/tokens.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/utilities/tokens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authentication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "18.15.0",
     "javascript.nodejs.core.library.typings.version": "18.15.0",
-    "last_opened_file_path": "F:/TheKIDends/IT/Web/Writer-App",
+    "last_opened_file_path": "F:/TheKIDends/IT/Game/Bomberman-Game",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,7 +116,11 @@
       <workItem from="1681306223027" duration="595000" />
       <workItem from="1681788031998" duration="184000" />
       <workItem from="1681788418169" duration="1550000" />
-      <workItem from="1682184985708" duration="41062000" />
+      <workItem from="1682184985708" duration="41384000" />
+      <workItem from="1682331223439" duration="20000" />
+      <workItem from="1682348997630" duration="23000" />
+      <workItem from="1682349136638" duration="3164000" />
+      <workItem from="1682382723085" duration="3008000" />
     </task>
     <task id="LOCAL-00001" summary="Start project with TinyMCE integration">
       <created>1679497885991</created>
@@ -256,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682306348396</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update functionality to edit post">
+      <created>1682331071685</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682331071685</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +339,7 @@
     <MESSAGE value="Add JSON Web Tokens" />
     <MESSAGE value="Add functionality to insert new post into MySQL database" />
     <MESSAGE value="Update Writer App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Writer App" />
+    <MESSAGE value="Update functionality to edit post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update functionality to edit post" />
   </component>
 </project>

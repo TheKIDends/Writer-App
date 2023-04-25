@@ -1,6 +1,7 @@
 import {checkAuthentication} from "./authentication.js";
 
 checkAuthentication();
+const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
 
 const postList = document.getElementById('post_list');
 
@@ -94,4 +95,7 @@ xhr.onreadystatechange = function() { // callback
         }
     }
 };
-xhr.send();
+
+const formData = new FormData();
+formData.append('token', token);
+xhr.send(new URLSearchParams(formData));

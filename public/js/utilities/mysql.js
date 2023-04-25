@@ -1,8 +1,8 @@
 import {db} from "../../../database/mysql.js";
 import jwt from "jsonwebtoken";
-import {authenticateToken, token} from "./tokens.js";
+import {authenticateToken} from "./tokens.js";
 
-export async function addPost(post) {
+export async function addPost(token, post) {
     if (authenticateToken(token) !== "true") {
         return { message: 'false'};
     }
@@ -47,7 +47,7 @@ export async function addPost(post) {
     });
 }
 
-export async function getPosts() {
+export async function getPosts(token) {
     if (authenticateToken(token) !== "true") {
         return { message: 'false', posts: {} };
     }
@@ -92,7 +92,7 @@ export async function getPosts() {
     });
 }
 
-export async function getPostById(postId) {
+export async function getPostById(token, postId) {
     if (authenticateToken(token) !== "true") {
         return { message: 'false', post: {} };
     }
@@ -121,7 +121,7 @@ export async function getPostById(postId) {
     });
 }
 
-export async function editPost(postId, data) {
+export async function editPost(token, postId, data) {
     if (authenticateToken(token) !== "true") {
         return { message: 'false' };
     }

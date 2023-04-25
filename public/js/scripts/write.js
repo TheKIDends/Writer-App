@@ -2,6 +2,7 @@ import {getDate} from "../utilities/index.js";
 import {checkAuthentication} from "./authentication.js";
 
 checkAuthentication();
+const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
 
 tinymce.init({
     selector: 'textarea#post_content',
@@ -67,6 +68,7 @@ writeForm.addEventListener('submit', (event) => {
 
     const time = getDate();
     const formData = new FormData();
+    formData.append('token', token);
     formData.append('title', title);
     formData.append('content', content);
     formData.append('date_opened', time);

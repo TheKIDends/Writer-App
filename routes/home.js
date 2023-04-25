@@ -9,7 +9,8 @@ home_router.get('/', (req, res) => {
 })
 
 home_router.post('/api/home', async (req, res) => {
-    const data = await getPosts();
+    const token = req.body.token;
+    const data = await getPosts(token);
     return res.send(data);
 })
 
@@ -31,7 +32,7 @@ home_router.post('/api/write', async (req, res) => {
         date_opened: data.date_opened,
         date_modified: data.date_modified
     }
-    const resultAddPost = await addPost(post);
+    const resultAddPost = await addPost(data.token, post);
     return res.send(resultAddPost);
 })
 
@@ -44,14 +45,16 @@ home_router.get('/edit', (req, res) => {
 })
 
 home_router.post('/api/edit/get_post', async (req, res) => {
+    const token = req.body.token;
     const postId = req.body.post_id;
-    const data = await getPostById(postId);
+    const data = await getPostById(token, postId);
     return res.send(data);
 })
 
 home_router.post('/api/edit/edit_post', async (req, res) => {
+    const token = req.body.token;
     const postId = req.body.post_id;
     const data = JSON.parse(req.body.data);
-    const resultEditPost = await editPost(postId, data);
+    const resultEditPost = await editPost(token, postId, data);
     return res.send(resultEditPost);
 })

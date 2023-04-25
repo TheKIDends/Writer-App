@@ -1,5 +1,6 @@
 export function checkAuthentication() {
     const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
+    // console.log(document.cookie);
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/api', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

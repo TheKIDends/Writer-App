@@ -1,11 +1,5 @@
 import jwt from  'jsonwebtoken';
 
-export let token;
-
-export function setToken(_token) {
-    token = _token;
-}
-
 export function generateAccessToken(jsonInfo) {
     return jwt.sign(jsonInfo, process.env.TOKEN_SECRET, { expiresIn: '3600s' });
 }
