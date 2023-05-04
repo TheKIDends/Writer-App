@@ -1,3 +1,5 @@
+setInterval(checkAuthentication, 2000);
+
 export function checkAuthentication() {
     const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
     // console.log(document.cookie);
