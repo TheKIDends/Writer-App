@@ -1,6 +1,7 @@
 import express from "express";
 import {db} from "../database/mysql.js";
-import {generateAccessToken} from "../public/js/utilities/tokens.js";
+import {generateAccessToken, generateRefreshToken} from "../public/js/utilities/tokens.js";
+import {setTokenIntoMySql} from "../public/js/utilities/mysql.js";
 
 export const auth_router = express.Router();
 
@@ -33,6 +34,12 @@ auth_router.post('/api/login', (req, res) => {
                     }
                     else {
                         const token = generateAccessToken({ email: email, password: password });
+                        const refreshToken = generateRefreshToken({ email: email, password: password });
+
+                        const resultSetRefreshToken = await setTokenIntoMySql(refreshToken, token);
+                        if (resultSetRefreshToken.message === "false") {
+                            return res.send({ message: 'Có lỗi xảy ra! Đăng nhập thất bại' });
+                        }
                         return res.send({ message: 'Đăng nhập thành công', token: token});
                     }
                 }

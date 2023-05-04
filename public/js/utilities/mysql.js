@@ -2,8 +2,72 @@ import {db} from "../../../database/mysql.js";
 import jwt from "jsonwebtoken";
 import {authenticateToken} from "./tokens.js";
 
+export async function setTokenByRefreshToken(refresh_token, token) {
+    return new Promise((resolve, reject)=>{
+        return resolve( new Promise((resolve, reject)=>{
+            db.query(
+                `
+                    UPDATE tokens
+                    SET token = '${token}'
+                    WHERE refresh_token = '${refresh_token}';
+                `
+                , async (err, result) => {
+                    if (err) {
+                        return resolve({ message: 'false' });
+                    }
+                    return resolve({ message: 'true' });
+                }
+            );
+        }));
+    });
+}
+
+export async function getRefreshToken(token) {
+    return new Promise((resolve, reject)=>{
+        return resolve( new Promise((resolve, reject)=>{
+            db.query(
+                `
+                    SELECT refresh_token
+                    FROM tokens
+                    WHERE token = '${token}';
+                `
+                , async (err, result) => {
+                    if (err) {
+                        return resolve({ message: 'false', refresh_token: {} });
+                    }
+                    if (result.length === 0) {
+                        return resolve({ message: 'false', refresh_token: {} });
+                    }
+
+                    const refreshToken = JSON.parse(JSON.stringify(result[0])).refresh_token;
+                    return resolve({ message: 'true', refresh_token: refreshToken });
+                }
+            );
+        }));
+    });
+}
+
+
+
+export async function setTokenIntoMySql(refreshToken, token) {
+    return new Promise((resolve, reject)=>{
+        db.query(
+            `
+                INSERT INTO tokens (refresh_token, token) VALUES ('${refreshToken}', '${token}');
+            `
+            , async (err, result) => {
+                if (err) {
+                    return resolve({ message: 'false'});
+                }
+                return resolve({ message: 'true'});
+            }
+        );
+    });
+}
+
+
 export async function addPost(token, post) {
-    if (authenticateToken(token) !== "true") {
+    if (await authenticateToken(token) !== "true") {
         return { message: 'false'};
     }
     const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
@@ -47,13 +111,7 @@ export async function addPost(token, post) {
     });
 }
 
-export async function getPosts(token) {
-    if (authenticateToken(token) !== "true") {
-        return { message: 'false', posts: {} };
-    }
-    const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
-    const email = decodedToken.email;
-
+export async function getPosts(email) {
     return new Promise((resolve, reject)=>{
         db.query(
             `
@@ -92,11 +150,7 @@ export async function getPosts(token) {
     });
 }
 
-export async function getPostById(token, postId) {
-    if (authenticateToken(token) !== "true") {
-        return { message: 'false', post: {} };
-    }
-
+export async function getPostById(postId) {
     return new Promise((resolve, reject)=>{
         return resolve( new Promise((resolve, reject)=>{
             db.query(
@@ -121,11 +175,25 @@ export async function getPostById(token, postId) {
     });
 }
 
-export async function editPost(token, postId, data) {
-    if (authenticateToken(token) !== "true") {
-        return { message: 'false' };
-    }
+export async function deletePostById(postId) {
+    return new Promise((resolve, reject)=>{
+        return resolve( new Promise((resolve, reject)=>{
+            db.query(
+                `
+                    DELETE FROM posts WHERE id = ${postId};
+                `
+                , async (err, result) => {
+                    if (err) {
+                        return resolve({ message: 'false'});
+                    }
+                    return resolve({ message: 'true'});
+                }
+            );
+        }));
+    });
+}
 
+export async function editPost(postId, data) {
     let sqlData = "";
     for (let key in data) {
         sqlData += key +  ' = ' + data[key] + ','

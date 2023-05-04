@@ -8,7 +8,8 @@ export function checkAuthentication() {
     xhr.onreadystatechange = function() { // callback
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                let response = JSON.parse(xhr.responseText);
+                const response = JSON.parse(xhr.responseText);
+
                 if (response.message === "Token expired") {
                     window.location.href = "/login";
                     alert("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
@@ -18,9 +19,9 @@ export function checkAuthentication() {
                     alert("Vui lòng đăng nhập.");
                 }
                 else {
-                    // let auth = response.message;
-                    // console.log(auth.email + ' ' + auth.password);
+                    document.cookie = `token=${response.token}`;
                 }
+
             } else {
                 console.error(xhr.status);
             }

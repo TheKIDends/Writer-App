@@ -1,4 +1,3 @@
-import {getTotalPosts, postList, setPostList} from "../utilities/local_storage.js";
 import {checkAuthentication} from "./authentication.js";
 
 checkAuthentication();
@@ -7,34 +6,44 @@ const token = document.cookie.split('; ').find(row => row.startsWith('token=')).
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
-if (id < 0 || id >= getTotalPosts()) {
-    window.location.href = `/post?id=-1&title=`;
-} else {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/edit/get_post', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+const xhr = new XMLHttpRequest();
+xhr.open('POST', '/api/edit/get_post', true);
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onreadystatechange = function() { // callback
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                let response = JSON.parse(xhr.responseText);
-                let post = JSON.parse(response.post);
-                if (response.message === 'true') {
-                    // console.log(post.title);
-                    // console.log(post.content);
-                    processResponse(post);
-                }
-            } else {
-                console.error(xhr.status);
+xhr.onreadystatechange = function() { // callback
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const data = response.data;
+
+            if (response.message === "Token expired") {
+                window.location.href = "/login";
+                alert("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
             }
-        }
-    };
+            else if (response.message === "false") {
+                window.location.href = "/login";
+                alert("Vui lòng đăng nhập.");
+            }
+            else {
+                document.cookie = `token=${response.token}`;
+                if (data.message === 'true') {
+                    let post = JSON.parse(data.post);
+                    processResponse(post);
+                } else {
+                    window.location.href = `/post?id=-1`;
+                }
+            }
 
-    const formData = new FormData();
-    formData.append('token', token);
-    formData.append('post_id', id);
-    xhr.send(new URLSearchParams(formData));
-}
+        } else {
+            console.error(xhr.status);
+        }
+    }
+};
+
+const formData = new FormData();
+formData.append('token', token);
+formData.append('post_id', id);
+xhr.send(new URLSearchParams(formData));
 
 function processResponse(post) {
     tinymce.init({
@@ -81,11 +90,27 @@ function processResponse(post) {
         xhr.onreadystatechange = function() { // callback
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    let response = JSON.parse(xhr.responseText);
-                    if (response.message === 'Chỉnh sửa bài viết thành công!') {
-                        window.location.href = `/post?id=${id}&title=${title}`;
-                        alert(response.message);
+                    const response = JSON.parse(xhr.responseText);
+                    const result = response.result;
+
+                    if (response.message === "Token expired") {
+                        window.location.href = "/login";
+                        alert("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
                     }
+                    else if (response.message === "false") {
+                        window.location.href = "/login";
+                        alert("Vui lòng đăng nhập.");
+                    }
+                    else {
+                        document.cookie = `token=${response.token}`;
+                        if (result.message === 'Chỉnh sửa bài viết thành công!') {
+                            window.location.href = `/post?id=${id}`;
+                            alert(result.message);
+                        } else {
+                            alert('Có lỗi xảy ra!');
+                        }
+                    }
+
                 } else {
                     console.error(xhr.status);
                 }

@@ -25,5 +25,15 @@ CREATE TABLE `user`
     PRIMARY KEY (id, email)
 );
 
+
+CREATE TABLE `tokens`
+(
+    id              bigint(20) AUTO_INCREMENT,
+    refresh_token   varchar(300),
+    token           varchar(300),
+    PRIMARY KEY (id, refresh_token)
+);
+
+
 ALTER TABLE posts
     ADD CONSTRAINT posts_user_fk FOREIGN KEY IF NOT EXISTS (author_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE;

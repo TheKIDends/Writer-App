@@ -1,6 +1,14 @@
 import express from "express";
 import {authenticateToken} from "../public/js/utilities/tokens.js";
-import {addPost, editPost, getPostById, getPosts} from "../public/js/utilities/mysql.js";
+import {
+    addPost, deletePostById,
+    editPost,
+    getPostById,
+    getPosts,
+    getRefreshToken,
+    setTokenByRefreshToken
+} from "../public/js/utilities/mysql.js";
+import jwt from "jsonwebtoken";
 
 export const home_router = express.Router();
 
@@ -9,15 +17,44 @@ home_router.get('/', (req, res) => {
 })
 
 home_router.post('/api/home', async (req, res) => {
-    const token = req.body.token;
-    const data = await getPosts(token);
-    return res.send(data);
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+    const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
+    const email = decodedToken.email;
+    const data = await getPosts(email);
+    return res.send(JSON.stringify({ message: 'true', token: token, data: data }));
 })
 
-home_router.post('/api', (req, res) => {
-    const token = req.body.token;
-    let accessToken = authenticateToken(token);
-    return res.send({ message: accessToken });
+home_router.post('/api', async (req, res) => {
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+    return res.send(JSON.stringify({ message: 'true', token: token }));
 })
 
 home_router.get('/write', (req, res) => {
@@ -40,21 +77,85 @@ home_router.get('/post', (req, res) => {
     res.render('post.ejs');
 })
 
+home_router.post('/api/post', async (req, res) => {
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+
+    const postId = req.body.post_id;
+    const data = await getPostById(postId);
+    return res.send(JSON.stringify({ message: 'true', token: token, data: data }));
+})
+
+home_router.post('/api/delete_post', async (req, res) => {
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+
+    const postId = req.body.post_id;
+    const data = await deletePostById(postId);
+    return res.send(JSON.stringify({ message: 'true', token: token, data: data }));
+})
+
+
 home_router.get('/edit', (req, res) => {
     res.render('edit.ejs');
 })
 
 home_router.post('/api/edit/get_post', async (req, res) => {
-    const token = req.body.token;
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+
     const postId = req.body.post_id;
-    const data = await getPostById(token, postId);
-    return res.send(data);
+    const data = await getPostById(postId);
+    return res.send(JSON.stringify({ message: 'true', token: token, data: data }));
 })
 
 home_router.post('/api/edit/edit_post', async (req, res) => {
-    const token = req.body.token;
+    let token = req.body.token;
+    const resultAuthenticateToken = await authenticateToken(token);
+    if (resultAuthenticateToken.message === "Token expired" ||
+        resultAuthenticateToken.message === "false") {
+        return res.send({ message: resultAuthenticateToken.message });
+    }
+    if (resultAuthenticateToken.message === 'New token') {
+        const resultGetRefreshToken = await getRefreshToken(token);
+        const refresh_token = resultGetRefreshToken.refresh_token;
+        token = resultAuthenticateToken.token;
+        const resultSetTokenByRefreshToken = await setTokenByRefreshToken(refresh_token, token)
+    }
+
     const postId = req.body.post_id;
     const data = JSON.parse(req.body.data);
-    const resultEditPost = await editPost(token, postId, data);
-    return res.send(resultEditPost);
+    const resultEditPost = await editPost(postId, data);
+
+    return res.send(JSON.stringify({ message: 'true', token: token, result: resultEditPost }));
 })
