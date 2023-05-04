@@ -136,3 +136,11 @@ btnCancel.addEventListener('click', (event) => {
 });
 
 
+const logOut = document.getElementById('log_out');
+logOut.addEventListener('click', (event) => {
+    if (confirm("Bạn có chắc chắn muốn đăng xuất không?")) {
+        document.cookie = `token=`;
+        window.location.href = "/login";
+    } else {
+    }
+});

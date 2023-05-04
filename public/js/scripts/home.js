@@ -151,3 +151,12 @@ function deletePost(postId, title) {
     formData.append('post_id', postId);
     xhr.send(new URLSearchParams(formData));
 }
+
+const logOut = document.getElementById('log_out');
+logOut.addEventListener('click', (event) => {
+    if (confirm("Bạn có chắc chắn muốn đăng xuất không?")) {
+        document.cookie = `token=`;
+        window.location.href = "/login";
+    } else {
+    }
+});
